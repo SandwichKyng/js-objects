@@ -1,8 +1,9 @@
 
 
-const button = document.getElementById("firstButton")
-const text1 = document.getElementById("firstInput")
-const text2 = document.getElementById("secondInput")
+const button = document.getElementById("firstButton");
+const text1 = document.getElementById("firstInput");
+const text2 = document.getElementById("secondInput");
+const atbilde = document.getElementById("atbilde");
 
 // let myDocument = {
 // name: "DOM is a tree",
@@ -22,7 +23,14 @@ function Output() {
 const number1 = Number(text1.value);
 const number2 = Number(text2.value);
 
+ const obj = {
+    paragraph: ""
+  };
+
 for (let i = number1; i <= number2; i++) {
-console.log(i);
+  obj.paragraph += i + " ";
 }
+
+atbilde.textContent = "Atbilde: " + obj.paragraph.trim();
+
 }
